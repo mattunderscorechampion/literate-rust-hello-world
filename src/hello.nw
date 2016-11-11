@@ -1,0 +1,19 @@
+
+The Rust hello world program although not a simple as some languages avoids verbosity.
+
+<<hello.rs>>=
+fn main() {
+    print!("Hello, world");
+}
+@
+
+It also benefits from an impressive build system cargo.
+
+<<Cargo.toml>>=
+[package]
+name = "hello"
+version = "0.1.0"
+authors = ["Matt Champion <mattunderscorechampion@gmail.com>"]
+
+[[bin]]
+name = "hello"
