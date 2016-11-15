@@ -4,17 +4,20 @@
 clean:
 	@rm -rf target
 
-target/rs: src/hello.nw
+target/rs/src/hello.rs: src/hello.nw
 	@mkdir -p target/rs/src
 	@notangle -Rhello.rs src/hello.nw > target/rs/src/hello.rs
+
+target/rs/Cargo.toml: src/hello.nw
+	@mkdir -p target/rs
 	@notangle -RCargo.toml src/hello.nw > target/rs/Cargo.toml
 
-hello: target/rs
+compile: target/rs/src/hello.rs target/rs/Cargo.toml
 	@cd target/rs && cargo build --release
 	@mkdir -p target/bin
 	@cp target/rs/target/release/hello target/bin/hello
 
-run: hello
+run: compile
 	@target/bin/hello
 
 target/latex/hello.tex: src/hello.nw
