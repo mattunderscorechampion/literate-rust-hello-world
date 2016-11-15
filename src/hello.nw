@@ -19,13 +19,19 @@ The entry point can be simply included in a file.
 <<hello.rs>>=
 <<entry point>>
 @
-It also benefits from an impressive build system cargo.
+It also benefits from an impressive build system, \emph{cargo}.
+Cargo is specified through a manifest file.
 
 <<Cargo.toml>>=
+<<package declaration>>
+
+[[bin]]
+name = "hello"
+@
+The manifest declares some basic properties of the package.
+
+<<package declaration>>=
 [package]
 name = "hello"
 version = "0.1.0"
 authors = ["Matt Champion <mattunderscorechampion@gmail.com>"]
-
-[[bin]]
-name = "hello"
