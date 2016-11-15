@@ -1,10 +1,15 @@
 
 The Rust hello world program although not a simple as some languages avoids verbosity.
 
-<<hello.rs>>=
+<<write to standard output>>=
+println!("Hello, world");
+
+<<entry point>>=
 fn main() {
-    println!("Hello, world");
+    <<write to standard output>>
 }
+<<hello.rs>>=
+<<entry point>>
 @ It also benefits from an impressive build system cargo.
 
 <<Cargo.toml>>=
