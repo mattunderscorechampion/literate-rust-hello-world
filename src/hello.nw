@@ -14,9 +14,9 @@ fn main() {
     <<write to standard output>>
 }
 @
-The entry point can be simply included in a file.
+The entry point can be simply included in a file called \emph{main.rs}.
 
-<<hello.rs>>=
+<<main.rs>>=
 <<entry point>>
 @
 It also benefits from an impressive build system, \emph{cargo}.
@@ -24,9 +24,6 @@ Cargo is specified through a manifest file.
 
 <<Cargo.toml>>=
 <<package declaration>>
-
-[[bin]]
-name = "hello"
 @
 The manifest declares some basic properties of the package.
 

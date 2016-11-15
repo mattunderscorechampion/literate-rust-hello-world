@@ -1,7 +1,7 @@
 
 .PHONY: clean
 
-rust_source = hello.rs
+rust_source = main.rs
 
 clean:
 	@rm -rf target
