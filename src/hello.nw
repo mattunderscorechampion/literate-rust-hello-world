@@ -3,7 +3,7 @@ The Rust hello world program although not a simple as some languages avoids verb
 
 <<hello.rs>>=
 fn main() {
-    print!("Hello, world");
+    println!("Hello, world");
 }
 @
 
