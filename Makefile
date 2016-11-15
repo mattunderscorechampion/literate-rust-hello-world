@@ -1,18 +1,20 @@
 
 .PHONY: clean
 
+rust_source = hello.rs
+
 clean:
 	@rm -rf target
 
-target/rs/src/hello.rs: src/hello.nw
+$(rust_source): src/hello.nw
 	@mkdir -p target/rs/src
-	@notangle -Rhello.rs src/hello.nw > target/rs/src/hello.rs
+	@notangle -R$@ src/hello.nw > target/rs/src/$@
 
 target/rs/Cargo.toml: src/hello.nw
 	@mkdir -p target/rs
 	@notangle -RCargo.toml src/hello.nw > target/rs/Cargo.toml
 
-compile: target/rs/src/hello.rs target/rs/Cargo.toml
+compile: $(rust_source) target/rs/Cargo.toml
 	@cd target/rs && cargo build --release
 	@mkdir -p target/bin
 	@cp target/rs/target/release/hello target/bin/hello
