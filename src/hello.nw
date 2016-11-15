@@ -5,9 +5,7 @@ The Rust hello world program although not a simple as some languages avoids verb
 fn main() {
     println!("Hello, world");
 }
-@
-
-It also benefits from an impressive build system cargo.
+@ It also benefits from an impressive build system cargo.
 
 <<Cargo.toml>>=
 [package]
