@@ -1,20 +1,16 @@
 
 .PHONY: clean
 
-rust_source = main.rs
+tangle_files = src/main.rs Cargo.toml
 
 clean:
 	@rm -rf target
 
-$(rust_source): src/hello.nw
+$(tangle_files): src/hello.nw
 	@mkdir -p target/rs/src
-	@notangle -R$@ src/hello.nw > target/rs/src/$@
+	@notangle -R$@ src/hello.nw > target/rs/$@
 
-target/rs/Cargo.toml: src/hello.nw
-	@mkdir -p target/rs
-	@notangle -RCargo.toml src/hello.nw > target/rs/Cargo.toml
-
-executable: $(rust_source) target/rs/Cargo.toml
+executable: $(tangle_files)
 	@cd target/rs && cargo build --release
 	@mkdir -p target/bin
 	@cp target/rs/target/release/hello target/bin/hello

@@ -29,6 +29,6 @@ version = "0.1.0"
 authors = ["Matt Champion <mattunderscorechampion@gmail.com>"]
 @ Cargo expects the entry point to be included in the file \emph{src/main.rs}.
 
-<<main.rs>>=
+<<src/main.rs>>=
 <<entry point>>
 @
