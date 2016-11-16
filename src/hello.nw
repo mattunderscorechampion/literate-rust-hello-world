@@ -1,7 +1,8 @@
 
-The Rust hello world program although not a simple as some languages avoids verbosity.
+The Rust hello world program, although not a simple as some languages, avoids verbosity.
 
-Writing to standard output can be done using the \emph{print!} marco.
+Writing to standard output can be done using the \emph{print!} macro.
+The `!' indicates that it is a macro.
 
 <<write to standard output>>=
 println!("Hello, world");
@@ -27,7 +28,8 @@ The manifest declares some basic properties of the package.
 name = "hello"
 version = "0.1.0"
 authors = ["Matt Champion <mattunderscorechampion@gmail.com>"]
-@ Cargo expects the entry point to be included in the file \emph{src/main.rs}.
+@
+Cargo expects the entry point to be included in the file \emph{src/main.rs}.
 
 <<src/main.rs>>=
 <<entry point>>
