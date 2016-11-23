@@ -11,7 +11,7 @@ $(tangle_files): src/hello.nw
 	@notangle -R$@ src/hello.nw > target/rs/$@
 
 executable: $(tangle_files)
-	@cd target/rs && cargo build --release 2> /dev/null
+	@cd target/rs && cargo build --release --quiet
 	@mkdir -p target/bin
 	@cp target/rs/target/release/hello target/bin/hello
 
