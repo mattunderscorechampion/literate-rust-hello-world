@@ -23,5 +23,5 @@ target/latex/hello.tex: src/hello.nw
 	@noweave -delay -latex src/hello.nw > target/latex/hello.tex
 
 book: target/latex/hello.tex
-	@mkdir -p target/manual
-	@pdflatex -output-directory target/manual target/latex/hello
+	@mkdir -p target/book
+	@pdflatex -output-directory target/book target/latex/hello
