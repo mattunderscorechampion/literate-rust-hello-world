@@ -1,12 +1,21 @@
 
-The Rust hello world program, although not a simple as some languages, avoids verbosity.
+\documentclass{article}
+\usepackage{noweb}
+\title{Rust: Hello, world}
+\author{Matt Champion}
+\date{\today}
+\begin{document}
+\maketitle
 
+The Rust hello world program, although not a simple as some languages, avoids verbosity.
+\section{Writing to standard output}
 Writing to standard output can be done using the \emph{print!} macro.
 The `!' indicates that it is a macro.
 
 <<write to standard output>>=
 println!("Hello, world");
 @
+\section{Code entry point}
 The entry point for the executable is specified with a function called \emph{main}.
 Neither arguments nor a return type are required.
 
@@ -15,6 +24,7 @@ fn main() {
     <<write to standard output>>
 }
 @
+\section{Building Rust}
 It also benefits from an impressive build system, \emph{cargo}.
 Cargo is specified through a manifest file.
 
@@ -34,3 +44,4 @@ Cargo expects the entry point to be included in the file \emph{src/main.rs}.
 <<src/main.rs>>=
 <<entry point>>
 @
+\end{document}

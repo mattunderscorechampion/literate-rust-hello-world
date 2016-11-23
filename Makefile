@@ -20,7 +20,7 @@ run: executable
 
 target/latex/hello.tex: src/hello.nw
 	@mkdir -p target/latex
-	@noweave -latex src/hello.nw > target/latex/hello.tex
+	@noweave -delay -latex src/hello.nw > target/latex/hello.tex
 
 book: target/latex/hello.tex
 	@mkdir -p target/manual
