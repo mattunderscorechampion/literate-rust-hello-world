@@ -10,8 +10,11 @@
 
 The Rust hello world program, although not as simple as some languages, avoids verbosity.
 \section{Writing to standard output}
-Writing to standard output can be done using the \emph{print!} macro.
+Writing to standard output can be done using the \emph{println!} macro.
 The `!' indicates that it is a macro.
+A macro looks a like function call but it is expanded out into a larger piece of code during compilation.
+It's arguments are treated differently, instead of values it can take fragments of code like a type or an identify.
+The \emph{println!} macro can take a variable number of expressions after a string and substitute placeholders in the string for formatted values.
 
 <<write to standard output>>=
 println!("Hello, world");
