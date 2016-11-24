@@ -8,7 +8,7 @@
 \begin{document}
 \maketitle
 
-The Rust hello world program, although not a simple as some languages, avoids verbosity.
+The Rust hello world program, although not as simple as some languages, avoids verbosity.
 \section{Writing to standard output}
 Writing to standard output can be done using the \emph{print!} macro.
 The `!' indicates that it is a macro.
@@ -51,6 +51,6 @@ The source repository is
 \begin{lstlisting}
 https://github.com/mattunderscorechampion/literate-rust-hello-world
 \end{lstlisting}
-It can be checkout out using Git.
+It can be checked out out using Git.
 
 \end{document}
