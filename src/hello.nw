@@ -55,5 +55,22 @@ The source repository is
 https://github.com/mattunderscorechampion/literate-rust-hello-world
 \end{lstlisting}
 It can be checked out out using Git.
+\section{This project}
+This project is written using a literate programming approach.
+Literate programming emphasises writing for the people working with the code instead of the machines.
+The source code is divided into small chunks and mixed together with the explanation for each chunk in a single document.
+The document can be tangled to produce compilable source code.
+The document can also be woven to produce this documentation.
+
+A Makefile is provided that can perform both weave and tangle the document.
+The Makefile can also compile the tangled source code to create an executable.
+To build the executable run:
+\begin{lstlisting}
+make executable
+\end{lstlisting}
+To build this documentation run:
+\begin{lstlisting}
+make book
+\end{lstlisting}
 
 \end{document}
