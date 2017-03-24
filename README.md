@@ -9,3 +9,5 @@ The book can be generated using `make book`.
 The executable can built using `make executable`.
 
 The executable can be build and run using `make run`.
+
+This readme can be printed to the standard output with `make help`.

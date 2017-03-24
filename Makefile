@@ -25,3 +25,6 @@ target/latex/hello.tex: src/hello.nw
 book: target/latex/hello.tex
 	@mkdir -p target/book
 	@pdflatex -output-directory target/book target/latex/hello > /dev/null
+
+help:
+	@cat README.md
