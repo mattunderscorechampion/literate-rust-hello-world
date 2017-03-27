@@ -8,10 +8,10 @@
 \begin{document}
 \maketitle
 
-The Rust hello world program, although not as simple as some languages, avoids verbosity.
+The Rust hello world program, although not as brief as some languages, avoids verbosity.
 \section{Hello, world}
-The hello world program is a traditional program frequently used as the first program written in a language the programmer has no experiance of.
-The program when run writes a short message to the standard output and then exits with a successful exit code.
+The hello world program is a traditional program frequently used as the first program written in a language the programmer has no experience with.
+The program, when run, writes a short message to the standard output and then exits with a successful exit code.
 The message has several variations: ``Hello, world'', ``Hello, world!'' and ``Hello world'' are common.
 \section{Writing to standard output}
 The standard output, frequently written as \emph{stdout}, is an output stream that the program can write to.
@@ -20,14 +20,14 @@ Programs intended to be run from a terminal use this stream to return the result
 Writing to standard output can be done using the \emph{println!} macro.
 The `!' indicates that it is a macro.
 A macro looks a like function call but it is expanded out into a larger piece of code during compilation.
-It's arguments are treated differently, instead of values it can take fragments of code like a type or an identify.
+It's arguments are treated differently, instead of values it can take fragments of code like a type or an identifier.
 The \emph{println!} macro can take a variable number of expressions after a string and substitute placeholders in the string for formatted values.
 
 <<write to standard output>>=
 println!("Hello, world");
 @
 \section{Code entry point}
-The entry point for the executable is specified with a function called \emph{main}.
+In Rust the entry point for the executable is specified with a function called \emph{main}.
 Neither arguments nor a return type are required.
 
 <<entry point>>=
@@ -47,7 +47,7 @@ std::process::exit(1);
 The program exits before this function returns.
 \section{Building Rust}
 It also benefits from an impressive build system, \emph{cargo}.
-Cargo is specified through a manifest file.
+Cargo build are specified through a TOML manifest file.
 
 <<Cargo.toml>>=
 <<package declaration>>
@@ -81,10 +81,12 @@ The document can also be woven to produce this documentation.
 
 A Makefile is provided that can perform both weave and tangle the document.
 The Makefile can also compile the tangled source code to create an executable.
+
 To build the executable run:
 \begin{lstlisting}
 make executable
 \end{lstlisting}
+
 To build this documentation run:
 \begin{lstlisting}
 make book
