@@ -39,11 +39,7 @@ The exit code returned by this program is \emph{0}.
 This exit code is used to represent the successful execution of the program.
 The main function does not support specifying an exit code.
 To exit with an non-zero exit code another function must be called.
-
-\begin{lstlisting}
-std::process::exit(1);
-\end{lstlisting}
-
+\emph{std::process::exit}.
 The program exits before this function returns.
 \section{Building Rust}
 It also benefits from an impressive build system, \emph{cargo}.
