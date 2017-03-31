@@ -10,6 +10,11 @@ $(tangle_files): src/hello.nw
 	@mkdir -p target/rs/src
 	@notangle -R$@ src/hello.nw > target/rs/$@
 
+debug: $(tangle_files)
+	@cd target/rs && cargo build
+	@mkdir -p target/bin
+	@cp target/rs/target/debug/hello target/bin/hello-debug
+
 executable: $(tangle_files)
 	@cd target/rs && cargo build --release --quiet
 	@mkdir -p target/bin
