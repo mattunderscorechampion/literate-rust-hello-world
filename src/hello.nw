@@ -2,6 +2,7 @@
 \documentclass{article}
 \usepackage{noweb}
 \usepackage{listings}
+\usepackage{framed}
 
 \lstset{
   basicstyle=\footnotesize,
@@ -33,18 +34,22 @@ A macro looks a like function call but it is expanded out into a larger piece of
 It's arguments are treated differently, instead of values it can take fragments of code like a type or an identifier.
 The \emph{println!} macro can take a variable number of expressions after a string and substitute placeholders in the string for formatted values.
 
+\begin{framed}
 <<write to standard output>>=
 println!("Hello, world");
 @
+\end{framed}
 \section{Code entry point}
 In Rust the entry point for the executable is specified with a function called \emph{main}.
 Neither arguments nor a return type are required.
 
+\begin{framed}
 <<entry point>>=
 fn main() {
     <<write to standard output>>
 }
 @
+\end{framed}
 The exit code returned by this program is \emph{0}.
 This exit code is used to represent the successful execution of the program.
 The main function does not support specifying an exit code.
@@ -55,22 +60,28 @@ The program exits before this function returns.
 It also benefits from an impressive build system, \emph{cargo}.
 Cargo build are specified through a TOML manifest file.
 
+\begin{framed}
 <<Cargo.toml>>=
 <<package declaration>>
 @
+\end{framed}
 The manifest declares some basic properties of the package.
 
+\begin{framed}
 <<package declaration>>=
 [package]
 name = "hello"
 version = "0.1.0"
 authors = ["Matt Champion <mattunderscorechampion@gmail.com>"]
 @
+\end{framed}
 Cargo expects the entry point to be included in the file \emph{src/main.rs}.
 
+\begin{framed}
 <<src/main.rs>>=
 <<entry point>>
 @
+\end{framed}
 \section{Source repository}
 The source repository is
 \begin{lstlisting}
