@@ -62,12 +62,15 @@ Cargo expects the entry point to be included in the file \emph{src/main.rs}.
 <<entry point>>
 @
 \section{Source repository}
-
 The source repository is
 \begin{lstlisting}
 https://github.com/mattunderscorechampion/literate-rust-hello-world
 \end{lstlisting}
 It can be checked out out using Git.
+\begin{lstlisting}
+git clone https://github.com/mattunderscorechampion/literate-rust-hello-world.git
+\end{lstlisting}
+Git is a distributed version control system. Version control systems track changes to files and aid collaboration by providing ways to share files and and changes.
 \section{This project}
 This project is written using a literate programming approach.
 Literate programming emphasises writing for the people working with the code instead of the machines.
