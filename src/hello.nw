@@ -2,6 +2,16 @@
 \documentclass{article}
 \usepackage{noweb}
 \usepackage{listings}
+
+\lstset{
+  basicstyle=\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  frame=single,
+  language=Bash,
+  stepnumber=2
+}
+
 \title{Rust: Hello, world}
 \author{Matt Champion}
 \date{\today}
